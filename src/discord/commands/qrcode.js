@@ -38,7 +38,7 @@ module.exports = {
                 .setRequired(true))
         .addStringOption(option =>
             option.setName('bank')
-                .setDescription('Mã ngân hàng (Mặc định: OCB)')
+                .setDescription('Mã ngân hàng (Mặc định: Techcombank)')
                 .setRequired(false)
                 .addChoices(
                     { name: 'MBBank', value: '970422' },
@@ -80,11 +80,11 @@ module.exports = {
                 .setDescription('Ghi chú (Mặc định: UNG HO E DAT)')
                 .setRequired(false)),
     async execute(interaction) {
-        const bankCode = interaction.options.getString('bank') || '970448'; // Default OCB
+        const bankCode = interaction.options.getString('bank') || '970407'; // Default tech
         const account = interaction.options.getString('account') || '6666156156';
         const accountName = (interaction.options.getString('accountname') || 'HO DUC DAT').toUpperCase();
         const amount = interaction.options.getInteger('amount');
-        const memo = interaction.options.getString('memo') || 'legitvn';
+        const memo = interaction.options.getString('memo') || 'UNG HO E DAT';
 
         const bankName = BANKS[bankCode] || bankCode;
         const qrUrl = `https://img.vietqr.io/image/${bankCode}-${account}-compact.png?amount=${amount}&addInfo=${encodeURIComponent(memo)}&accountName=${encodeURIComponent(accountName)}`;

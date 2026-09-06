@@ -49,19 +49,19 @@ const commands = [
             {
                 name: 'account',
                 type: 3, // STRING
-                description: 'Số tài khoản ngân hàng (Mặc định: 0988006094)',
+                description: 'Số tài khoản ngân hàng (Mặc định: 6666156156)',
                 required: false
             },
             {
                 name: 'accountname',
                 type: 3, // STRING
-                description: 'Tên tài khoản ngân hàng (Mặc định: TRAN VAN QUY)',
+                description: 'Tên tài khoản ngân hàng (Mặc định: HO DUC DAT)',
                 required: false
             },
             {
                 name: 'memo',
                 type: 3, // STRING
-                description: 'Ghi chú (Mặc định: legitvn)',
+                description: 'Ghi chú (Mặc định: UNG HO E DAT)',
                 required: false
             }
         ]

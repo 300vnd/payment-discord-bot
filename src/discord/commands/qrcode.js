@@ -69,15 +69,15 @@ module.exports = {
                 ))
         .addStringOption(option =>
             option.setName('account')
-                .setDescription('Số tài khoản ngân hàng (Mặc định: 0988006094)')
+                .setDescription('Số tài khoản ngân hàng (Mặc định: 6666156156)')
                 .setRequired(false))
         .addStringOption(option =>
             option.setName('accountname')
-                .setDescription('Tên tài khoản ngân hàng (Mặc định: TRAN VAN QUY)')
+                .setDescription('Tên tài khoản ngân hàng (Mặc định: HO DUC DAT)')
                 .setRequired(false))
         .addStringOption(option =>
             option.setName('memo')
-                .setDescription('Ghi chú (Mặc định: legitvn)')
+                .setDescription('Ghi chú (Mặc định: UNG HO E DAT)')
                 .setRequired(false)),
     async execute(interaction) {
         const bankCode = interaction.options.getString('bank') || '970448'; // Default OCB

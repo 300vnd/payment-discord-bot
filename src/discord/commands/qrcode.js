@@ -81,8 +81,8 @@ module.exports = {
                 .setRequired(false)),
     async execute(interaction) {
         const bankCode = interaction.options.getString('bank') || '970448'; // Default OCB
-        const account = interaction.options.getString('account') || '0988006094';
-        const accountName = (interaction.options.getString('accountname') || 'TRAN VAN QUY').toUpperCase();
+        const account = interaction.options.getString('account') || '6666156156';
+        const accountName = (interaction.options.getString('accountname') || 'HO DUC DAT').toUpperCase();
         const amount = interaction.options.getInteger('amount');
         const memo = interaction.options.getString('memo') || 'legitvn';
 
